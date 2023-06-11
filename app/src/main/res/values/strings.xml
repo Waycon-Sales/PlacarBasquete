@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PlacarBasquete</string>
+    <string name="titleHome">Home</string>
+    <string name="lblConfig">Configurações</string>
+    <string name="lblNewGame">Novo Jogo</string>
+    <string name="lblHistorico">Histórico</string>
+    <string name="lblCreditos">Créditos</string>
+    <string name="lbldate">Data: 10/06/2023</string>
+    <string name="lblDuracao">Duração: 5:45:55</string>
+    <string name="lblTimes">Time A vs Time B</string>
+    <string name="lblPlacar">32 vs 56</string>
+    <string name="hint_equipe">Inisira o nome da Equipe</string>
+    <string name="hint_duration">Insira a duracao do quarto</string>
+    <string name="hint_qtdQ">Insira a quantidade de quartos</string>
+    <string name="hint_durationadd">Insira a duração do tempo adicional</string>
+    <string name="btnSave">Salvar configurações</string>
+
+    <string name="lblEquipe01">Equipe A:</string>
+    <string name="lblEquipe02">Equipe B:</string>
+    <string name="lblDuracaoQuarto">Duração de um quarto:</string>
+    <string name="lblQtdQ">Quantidade de quartos na partida:</string>
+    <string name="lblAddDuracao">Tempo adicional:</string>
+
+    <string name="lblCred01">By: Antonio Waycon</string>
+    <string name="lblCred02">Universidade Federal do Ceará</string>
+    <string name="lblCred03">Progamação para dispositivos móveis - 2023.1</string>
+    <string name="valuePoint">09</string>
+    <string name="vs">VS</string>
+    <string name="qtdQuarto">Qto 01/04</string>
+    <string name="time">00:00</string>
+    <string name="btnGameOver">Encerrar Partida</string>
+    <string name="addOne">+1</string>
+    <string name="addTwo">+2</string>
+    <string name="addThree">+3</string>
+
+
+</resources>

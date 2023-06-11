@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PlacarBasquete" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.PlacarBasquete" parent="Base.Theme.PlacarBasquete" />
+
+    <style name="ButtonStyleViolet" parent="android:style/Widget.Button">
+        <item name="colorPrimary">@color/violet</item>
+        <item name="colorPrimaryVariant">@color/violet</item>
+        <item name="colorOnPrimary">@color/violet</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+    </style>
+</resources>
