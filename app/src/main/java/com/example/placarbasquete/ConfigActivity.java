@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.placarbasquete.models.ConfigModel;
@@ -25,6 +26,8 @@ public class ConfigActivity extends AppCompatActivity {
     private EditText equipeA, equipeB, duracaoQuarto, qtdQuarto, tempoAdicional;
     private Button btnSave;
 
+    private ImageView btnBack;
+
     private SharedPreferenceUtil shared;
 
     @Override
@@ -40,6 +43,15 @@ public class ConfigActivity extends AppCompatActivity {
         qtdQuarto = findViewById(R.id.txQtdQ);
         tempoAdicional = findViewById(R.id.txAddTime);
         btnSave = findViewById(R.id.btnSaveConfig);
+
+        btnBack = findViewById(R.id.btnBackConfig);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         duracaoQuarto.addTextChangedListener(new TextWatcher() {
             private String current = "";

@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.placarbasquete.models.HistoricoModel;
 import com.example.placarbasquete.utils.HistoricoAdapter;
@@ -21,6 +23,8 @@ public class HistoricoActivity extends AppCompatActivity {
     private RecyclerView recycler;
     private SharedPreferenceUtil preferences;
 
+    private ImageView btnBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,8 @@ public class HistoricoActivity extends AppCompatActivity {
 
         preferences = new SharedPreferenceUtil(getApplicationContext());
         recycler = findViewById(R.id.recyclerView);
+
+        btnBack = findViewById(R.id.btnBackHist);
 
         String list = preferences.getAccess(StaticKeys.LIST_HISTORIC);
         Type type = new TypeToken<ArrayList<HistoricoModel>>(){}.getType();
@@ -37,6 +43,13 @@ public class HistoricoActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
         recycler.setAdapter(adapter);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         
     }
 }
