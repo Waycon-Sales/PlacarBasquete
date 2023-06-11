@@ -292,11 +292,15 @@ public class PlacarActivity extends AppCompatActivity implements PlacarInterface
         Type type = new TypeToken<ArrayList<HistoricoModel>>(){}.getType();
         ArrayList<HistoricoModel> historico = new Gson().fromJson(list, type);
 
+        if(historico == null ){
+            historico = new ArrayList<>();
+        }
+
         HistoricoModel playAtual = new HistoricoModel();
         playAtual.setData(dataFormatada);
         playAtual.setPlacar(String.format("%02d vs %02d",pointA, pointB));
         playAtual.setDuracao(tvTimeTotal.getText().toString());
-        playAtual.setTimes(tvEquipeA.getText().toString()+"vs"+tvEquipeB.getText().toString());
+        playAtual.setTimes(tvEquipeA.getText().toString()+" vs "+tvEquipeB.getText().toString());
 
         historico.add(playAtual);
 
