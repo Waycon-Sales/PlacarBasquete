@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogFimJogo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dialog.DialogFinishGameActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_white"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline21"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline20">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/titleDialogFinishGame"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnAddTimeDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_white"
+            android:elevation="6dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:shadowColor="@color/black"
+            android:text="@string/btnAddTime"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:theme="@style/ButtonStyleViolet" />
+
+        <Button
+            android:id="@+id/btnFinishGameDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_white"
+            android:elevation="6dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:shadowColor="@color/black"
+            android:text="@string/btnFinalizar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:theme="@style/ButtonStyleViolet" />
+
+        <Button
+            android:id="@+id/btnCancelDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_white"
+            android:elevation="6dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:shadowColor="@color/black"
+            android:text="@string/btnCancel"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:theme="@style/ButtonStyleViolet" />
+
+        <Button
+            android:id="@+id/btnFinishNotSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_rounded_white"
+            android:elevation="6dp"
+            android:shadowColor="@color/black"
+            android:text="@string/btnFinalizarSemSalvar"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:theme="@style/ButtonStyleViolet" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,9 @@
     <string name="lblTimes">Time A vs Time B</string>
     <string name="lblPlacar">32 vs 56</string>
     <string name="hint_equipe">Inisira o nome da Equipe</string>
-    <string name="hint_duration">Insira a duracao do quarto</string>
+    <string name="hint_duration">00:00:00</string>
     <string name="hint_qtdQ">Insira a quantidade de quartos</string>
-    <string name="hint_durationadd">Insira a duração do tempo adicional</string>
+    <string name="hint_durationadd">00:00:00</string>
     <string name="btnSave">Salvar configurações</string>
 
     <string name="lblEquipe01">Equipe A:</string>
@@ -32,6 +32,17 @@
     <string name="addOne">+1</string>
     <string name="addTwo">+2</string>
     <string name="addThree">+3</string>
+
+    <string name="titleDialogFinishGame">Tempo esgotado! Essa partida será salva no histórico de partidas.</string>
+    <string name="btnCancel">Cancelar</string>
+    <string name="btnFinalizar">Finalizar e Salvar</string>
+    <string name="btnFinalizarSemSalvar">Finalizar sem salvar</string>
+    <string name="btnAddTime">Tempo Adicional</string>
+    <string name="btnRebobinar">Voltar placar</string>
+    >
+
+
+
 
 
 </resources>

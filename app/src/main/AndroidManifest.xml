@@ -13,25 +13,29 @@
         android:theme="@style/Theme.PlacarBasquete"
         tools:targetApi="31">
         <activity
-            android:name=".PlacarActivity"
+            android:name=".dialog.DialogFinishGameActivity"
             android:screenOrientation="landscape"
             android:exported="false" />
         <activity
+            android:name=".PlacarActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".AboutActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ConfigActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".HistoricoActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
