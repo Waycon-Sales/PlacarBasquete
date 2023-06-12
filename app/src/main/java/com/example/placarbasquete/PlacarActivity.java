@@ -205,6 +205,7 @@ public class PlacarActivity extends AppCompatActivity implements PlacarInterface
             qtdQuarto = config.getQtdQuarto();
             tvEquipeA.setText(config.getEquipeA());
             tvEquipeB.setText(config.getEquipeB());
+            tvQto.setText("Qto "+String.format("%02d/%02d",(restartCount+1), qtdQuarto));
 
             timeRemaining = initialMillis;
 
