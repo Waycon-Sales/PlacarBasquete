@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.placarbasquete.control.DBController;
 import com.example.placarbasquete.models.HistoricoModel;
 import com.example.placarbasquete.utils.HistoricoAdapter;
 import com.example.placarbasquete.utils.SharedPreferenceUtil;
@@ -35,9 +36,8 @@ public class HistoricoActivity extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btnBackHist);
 
-        String list = preferences.getAccess(StaticKeys.LIST_HISTORIC);
-        Type type = new TypeToken<ArrayList<HistoricoModel>>(){}.getType();
-        ArrayList<HistoricoModel> historico = new Gson().fromJson(list, type);
+        DBController dbController = new DBController(getApplicationContext());
+        ArrayList<HistoricoModel> historico = dbController.selecionarPartidas();
 
         HistoricoAdapter adapter = new HistoricoAdapter(historico);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);

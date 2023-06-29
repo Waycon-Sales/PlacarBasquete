@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.placarbasquete.control.DBController;
 import com.example.placarbasquete.dialog.DialogFinishGameActivity;
 import com.example.placarbasquete.interfaces.PlacarInterface;
 import com.example.placarbasquete.models.ConfigModel;
@@ -286,16 +287,7 @@ public class PlacarActivity extends AppCompatActivity implements PlacarInterface
     public void finishAndSave() {
         LocalDate dataAtual = LocalDate.now();
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
         String dataFormatada = dataAtual.format(formatador);
-
-        String list = preferences.getAccess(StaticKeys.LIST_HISTORIC);
-        Type type = new TypeToken<ArrayList<HistoricoModel>>(){}.getType();
-        ArrayList<HistoricoModel> historico = new Gson().fromJson(list, type);
-
-        if(historico == null ){
-            historico = new ArrayList<>();
-        }
 
         HistoricoModel playAtual = new HistoricoModel();
         playAtual.setData(dataFormatada);
@@ -303,11 +295,10 @@ public class PlacarActivity extends AppCompatActivity implements PlacarInterface
         playAtual.setDuracao(tvTimeTotal.getText().toString());
         playAtual.setTimes(tvEquipeA.getText().toString()+" vs "+tvEquipeB.getText().toString());
 
-        historico.add(playAtual);
+        DBController dbController = new DBController(getApplicationContext());
+        dbController.inserirPartida(playAtual);
 
-        preferences.setAcessConfig(StaticKeys.LIST_HISTORIC, new Gson().toJson(historico));
         finish();
-        Toast.makeText(this, "Ta finalizando e salvando", Toast.LENGTH_SHORT).show();
     }
 
     @Override
